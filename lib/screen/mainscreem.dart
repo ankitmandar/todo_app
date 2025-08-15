@@ -11,9 +11,19 @@ class Mainscreem extends StatelessWidget {
         centerTitle: true,
         title: Text('Todo App'),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(Icons.add, size: 30),
+          InkWell(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Container(height: 250);
+                },
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(Icons.add, size: 30),
+            ),
           ),
         ],
       ),
