@@ -5,6 +5,18 @@ class Mainscreem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(centerTitle: true, title: Text('Todo App')));
+    return Scaffold(
+      drawer: Drawer(child: Text('This is Drawer')),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Todo App'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(Icons.add, size: 30),
+          ),
+        ],
+      ),
+    );
   }
 }
