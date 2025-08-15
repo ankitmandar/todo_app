@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoapp/screen/addtodo.dart';
 
 class Mainscreem extends StatelessWidget {
   const Mainscreem({super.key});
@@ -16,7 +17,11 @@ class Mainscreem extends StatelessWidget {
               showModalBottomSheet(
                 context: context,
                 builder: (context) {
-                  return Container(height: 250);
+                  return Container(
+                    padding: EdgeInsets.all(20),
+                    height: 200,
+                    child: Addtodo(),
+                  );
                 },
               );
             },
@@ -27,6 +32,7 @@ class Mainscreem extends StatelessWidget {
           ),
         ],
       ),
+      body: Container(),
     );
   }
 }
